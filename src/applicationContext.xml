@@ -14,7 +14,17 @@
     
     <bean id="myCoach" 
     class="com.luv2code.springdemo.TrackCoach">
+    
+    <!-- Done via constructor injection -->
     <constructor-arg ref="myFortuneService"/>
+    </bean>
+    
+    <bean id="myGAACoach" class="com.luv2code.springdemo.GaaCoach">
+    
+    <!-- set up setter injection. This will call getFortuneService in gaaCoach method -->
+    <property name="fortuneService" ref="myFortuneService"/>
+    <property name="emailAddress" value="dan@email.com"/>
+    <property name="team" value="Harps"/>
     </bean>
     
     <bean id="myLoggerConfig" class="com.luv2code.springdemo.MyLoggerConfig" init-method="initLogger">
