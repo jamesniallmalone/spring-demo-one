@@ -1,4 +1,6 @@
-package com.luv2code.springdemo;
+package com.luv2code.springdemo.coach;
+
+import com.luv2code.springdemo.fortune.FortuneService;
 
 public class SwimmingCoach implements Coach {
 	
