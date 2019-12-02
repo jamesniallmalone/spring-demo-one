@@ -19,6 +19,16 @@ public class SetterDemoApp {
 		System.out.println("Coach address: " + theCoach.getEmailAddress());
 		System.out.println("Team name: " + theCoach.getTeam());
 		
+		theCoach = context.getBean("myPropertiesCoach", GaaCoach.class);
+		
+		//call methods on the bean
+		System.out.println(theCoach.getDailyWorkOut());
+		
+		System.out.println(theCoach.getDailyFortune() );
+		
+		System.out.println("Coach address: " + theCoach.getEmailAddress());
+		System.out.println("Team name: " + theCoach.getTeam());
+		
 		//close the context.
 		context.close();
 
